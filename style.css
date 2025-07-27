@@ -8,14 +8,22 @@ body {
 }
 
 /* Encabezado y navegación */
-header {
+/* header {
   background-color: #0066cc;
   color: white;
   padding: 1em;
   text-align: center;
 }
-
-nav ul {
+ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0066cc;
+  color: white;
+}
+/* nav ul {
   list-style: none;
   padding: 0;
 }
@@ -29,22 +37,57 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+} */
+
+nav {
+  padding-right: 50px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fcfcfc;
+  font-weight: bold;
+  font-size: medium;
+}
+
+nav a:hover {
+  padding: 10px;
+  background-color: #76b2eb;
+  border-radius: 5px;
 }
 
 /* Carrusel (simulado con imágenes) */
 .carousel {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 20px auto;
+}
+
+.carousel-track {
   display: flex;
-  overflow-x: auto;
-  gap: 1em;
-  padding: 1em;
-  background-color: #f2f2f2;
+  transition: transform 0.5s ease-in-out;
 }
 
-.carousel img {
-  height: 200px;
-  border-radius: 10px;
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
 }
 
+.carousel-item img,
+.carousel-item video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 /* Secciones */
 section {
   padding: 2em;
@@ -83,4 +126,35 @@ footer {
   text-align: center;
   padding: 1em;
   margin-top: 2em;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 100px;
+  border-radius: 50%;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-button.prev {
+  left: 20px;
+}
+
+.carousel-button.next {
+  right: 20px;
 }
