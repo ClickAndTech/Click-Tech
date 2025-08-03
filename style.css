@@ -19,7 +19,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 40px;
   background-color: #0066cc;
   color: white;
 }
@@ -67,26 +67,58 @@ nav a:hover {
 /* Carrusel (simulado con imágenes) */
 .carousel {
   max-width: 100%;
+  height: 60vh;
   overflow: hidden;
   position: relative;
   margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  height: 100%;
 }
 
 .carousel-item {
   min-width: 100%;
+  height: 100%;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.carousel-item img,
-.carousel-item video {
-  width: 100%;
-  height: auto;
-  display: block;
+.carousel-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  height: 100%;
+  padding: 0px 20px;
+  overflow: hidden;
+  width: 30%; /* Limita el ancho máximo del contenido 90vh l  l*/
+  margin: 0 auto;
+  padding: 0 5vw;
+}
+
+.carousel-text {
+  flex: 1; /* Ocupará todo el espacio disponible restante */
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #0066cc;
+  text-align: left; /* Alineación izquierda para mayor claridad */
+  max-width: 300px; /* Limita ancho del texto para no estirarse demasiado */
+  word-wrap: break-word;
+}
+
+.carousel-item img {
+  width: auto;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
 }
 /* Secciones */
 section {
