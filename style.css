@@ -225,8 +225,8 @@ footer {
 }
 
 .service-icon {
-  width: 50px;
-  height: 50px;
+  width: 150px; /* tamaño del círculo*/
+  height: 150px; /* tamaño del círclo*/
   margin-bottom: 1rem;
   background-color: rgba(138, 43, 226, 0.1); /* Morado claro detrás del ícono */
   /*padding: 10px; /* 🔴 esto achica la imagen */
