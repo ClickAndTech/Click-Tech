@@ -229,7 +229,8 @@ footer {
   height: 50px;
   margin-bottom: 1rem;
   background-color: rgba(138, 43, 226, 0.1); /* Morado claro detrás del ícono */
-  padding: 10px;
+  /*padding: 10px; /* 🔴 esto achica la imagen */
+  object-fit: cover; /* hace que la imagen rellene el círculo */
   border-radius: 50%;
 }
 
