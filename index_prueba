@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Click&Tech</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index_prueba.css" />
   </head>
   <body>
     <header>
@@ -15,10 +15,9 @@
       <nav>
         <ul>
           <li><a href="#">Inicio</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Galería</a></li>
-          <li><a href="#">Contacto</a></li>
-          <!--<li><a href="#">Blog</a></li> -->
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
     </header>
@@ -55,8 +54,8 @@
       <button class="carousel-button next">&#10095;</button>
     </section>
 
-    <!-- Sección de servicios -->
-    <section class="services">
+    <!-- Galería -->
+    <section id="galeria" class="services">
       <div class="container">
         <div class="service-card">
           <a href="http://www.youtube.com/@detodounpoco_electronica">
@@ -97,7 +96,6 @@
             class="service-icon"
           />
           <h3>Emilia's Blog</h3>
-
           <p>
             Te invito a explorar este espacio. Y si algo resuena contigo, ¡que
             genial!
@@ -105,7 +103,6 @@
               >Ir al Blog</a
             >
           </p>
-          <p></p>
         </div>
 
         <div class="service-card">
@@ -120,7 +117,7 @@
       </div>
     </section>
 
-    <!-- Galería -->
+    <!-- Servicios -->
     <section id="servicios" class="services">
       <h2>Nuestros Servicios</h2>
       <div class="container">
