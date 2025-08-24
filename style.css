@@ -1,4 +1,8 @@
 /* Estilo base */
+html {
+  scroll-behavior: smooth; /* ✅ Scroll suave */
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -8,13 +12,6 @@ body {
 }
 
 /* Encabezado y navegación */
-/* header {
-  background-color: #0066cc;
-  color: white;
-  padding: 1em;
-  text-align: center;
-}
- */
 header {
   display: flex;
   justify-content: space-between;
@@ -23,21 +20,6 @@ header {
   background-color: #0066cc;
   color: white;
 }
-/* nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline-block;
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-} */
 
 nav {
   padding-right: 50px;
@@ -64,7 +46,7 @@ nav a:hover {
   border-radius: 5px;
 }
 
-/* Carrusel (simulado con imágenes) */
+/* Carrusel */
 .carousel {
   max-width: 100%;
   height: 60vh;
@@ -99,18 +81,18 @@ nav a:hover {
   height: 100%;
   padding: 0px 20px;
   overflow: hidden;
-  width: 30%; /* Limita el ancho máximo del contenido 90vh l  l*/
+  width: 30%;
   margin: 0 auto;
   padding: 0 5vw;
 }
 
 .carousel-text {
-  flex: 1; /* Ocupará todo el espacio disponible restante */
+  flex: 1;
   font-size: 1.4em;
   font-weight: bold;
   color: #0066cc;
-  text-align: left; /* Alineación izquierda para mayor claridad */
-  max-width: 300px; /* Limita ancho del texto para no estirarse demasiado */
+  text-align: left;
+  max-width: 300px;
   word-wrap: break-word;
 }
 
@@ -120,6 +102,7 @@ nav a:hover {
   object-fit: contain;
   border-radius: 10px;
 }
+
 /* Secciones */
 section {
   padding: 2em;
@@ -131,19 +114,6 @@ h2 {
 
 ul li::marker {
   color: #ffcc00;
-}
-
-/* Galería */
-.gallery {
-  display: flex;
-  gap: 1em;
-  flex-wrap: wrap;
-}
-
-.gallery img {
-  width: 30%;
-  border: 2px solid #ffcc00;
-  border-radius: 5px;
 }
 
 /* Contacto */
@@ -178,7 +148,7 @@ footer {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  padding: 20px 10px 20px 10px;
+  padding: 20px 10px;
   cursor: pointer;
   z-index: 1;
 }
@@ -196,10 +166,54 @@ footer {
   height: 60px;
 }
 
+/* Galería (antes era #servicios) */
+.assets {
+  padding: 4rem 1rem;
+  background-color: #fff;
+}
+
+.assets .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+
+.assets-card {
+  flex: 1 1 calc(25% - 2rem);
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.assets-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+  background-color: #8febfa;
+}
+
+.assets-icon {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 1rem;
+  background-color: rgba(138, 43, 226, 0.1);
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 /* ===== Services Section ===== */
 .services {
   padding: 4rem 1rem;
   background-color: #fff;
+}
+
+.services h2 {
+  text-align: left;
+  margin-left: 10rem; /* ajusta según el margen de tus cards */
+  font-size: 2rem;
 }
 
 .services .container {
@@ -219,21 +233,6 @@ footer {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
-}
-
-.service-icon {
-  width: 150px; /* tamaño del círculo*/
-  height: 150px; /* tamaño del círclo*/
-  margin-bottom: 1rem;
-  background-color: rgba(138, 43, 226, 0.1); /* Morado claro detrás del ícono */
-  /*padding: 10px; /* 🔴 esto achica la imagen */
-  object-fit: cover; /* hace que la imagen rellene el círculo */
-  border-radius: 50%;
-}
-
 .service-card h3 {
   font-size: 1.2rem;
   font-weight: 600;
@@ -244,6 +243,12 @@ footer {
   color: #555;
   font-size: 0.95rem;
   line-height: 1.4;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+  background-color: #8febfa;
 }
 
 /* ===== Responsive ===== */
